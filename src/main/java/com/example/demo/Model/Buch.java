@@ -24,6 +24,7 @@ public class Buch {
     @Column(name="genra")
     private String genra;
 
+    @NonNull
     @ManyToOne(fetch = FetchType.EAGER,cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
     @JoinColumn(name = "AuthorID")
     private Author author;
